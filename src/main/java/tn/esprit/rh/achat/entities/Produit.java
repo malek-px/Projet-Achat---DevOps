@@ -48,6 +48,7 @@ public class Produit implements Serializable {
 	@JsonIgnore
 	private CategorieProduit categorieProduit;
 	
+	//2nd commit here
 
 
 	
