@@ -49,6 +49,7 @@ public class Produit implements Serializable {
 	private CategorieProduit categorieProduit;
 	
 	//2nd commit here
+	//3rd commit
 
 
 	
