@@ -27,7 +27,7 @@ import tn.esprit.rh.achat.repositories.StockRepository;
 import tn.esprit.rh.achat.services.StockServiceImpl;
 
 @SpringBootTest
- class StockServiceImplTest {
+ class StockServiceImplTestt {
 	
 	@MockBean
 	StockRepository repo;
@@ -45,17 +45,13 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 	{
 
 		Stock stock1 = new Stock("TestMock1",10,2);
-
 		Stock stock2= new Stock("TestMock2",4,1);
-
 		Stock stock3 = new Stock("TestMock3",100,85);
-
 		List<Stock> stocks = Arrays.asList(stock1,stock2,stock3) ;
 
 		
 
 		//ngolo biha le repo traje3li data li f list stocks l 3malnha statique
-
 		BDDMockito.given(repo.findAll()).willReturn(stocks);
 
 		
@@ -75,11 +71,8 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 	{
 
 		Stock stock1 = new Stock("TestMock1",10,2);
-
 		BDDMockito.given(repo.findById(anyLong())).willReturn(Optional.ofNullable(stock1));
-
 		Stock result = srvce.retrieveStock(1L);
-
 		assertThat(result.getLibelleStock()).containsIgnoringCase("TestMock"); 	 	
 
 	}
@@ -93,9 +86,7 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 	{
 
 		Stock stock = new Stock("addStock",100,50);
-
 		when(repo.save(stock)).thenReturn(stock);
-
 		assertEquals(stock, srvce.addStock(stock));
 
 	}
@@ -109,13 +100,9 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 	{
 
 		Stock stock = new Stock("addStock",100,50);
-
 		when(repo.save(stock)).thenReturn(stock);
-
 		stock.setLibelleStock("updatestok");
-
 		stock.setQte(90);
-
 		assertEquals(stock, srvce.updateStock(stock));
 
 	}
@@ -133,11 +120,8 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 	{
 
 		Stock stock = new Stock(1L,"addStock",100,50);
-
 		BDDMockito.given(repo.findById(anyLong())).willReturn(Optional.ofNullable(stock));
-
 		srvce.deleteStock(stock.getIdStock());
-
 		assertEquals(stock, srvce.deleteStock(stock.getIdStock()));
 
 	}
@@ -145,12 +129,10 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 	*/
 
 	@Test
-
 	void TestretrieveStatusStock ()
 
 	{
-
-
+		
 	}
 
 	
