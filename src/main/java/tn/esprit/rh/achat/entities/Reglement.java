@@ -40,9 +40,5 @@ public class Reglement implements Serializable{
 		this.montantRestant = montantRestant;
 		this.payee = payee;
 		this.dateReglement = dateReglement;
-		
-	}
-
-	
-	
+		}
 }
