@@ -128,13 +128,13 @@ import tn.esprit.rh.achat.services.StockServiceImpl;
 
 	*/
 
-	@Test
+	/*@Test
 	void TestretrieveStatusStock ()
 
 	{
 		
 	}
-
+*/
 	
 
 
